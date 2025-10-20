@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Calculatrice Scientifique</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background: #076a91;
+    }
+
+    .calculator {
+      background: #21087a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(116, 11, 19, 0.76);
+    }
+
+    .display {
+      width: 100%;
+ height: 50px;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      text-align: right;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 60px);
+      gap: 10px;
+    }
+  .buttons button {
+      padding: 15px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      background: #147ff9;
+      color: white rgb(255, 127, 202);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .buttons button:hover {
+      background: #147b15;
+    }
+
+    .sci-buttons {
+      display: none;
+      margin-top: 15px;
+      grid-template-columns: repeat(4, 60px);
+      gap: 10px;
+    }
+ .sci-buttons.active {
+      display: grid;
+    }
+
+    .toggle-btn {
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 1rem;
+      margin-top: 10px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" class="display" id="display" readonly />
+ <div class="buttons">
+      <button >7</button>
+      <button>8</button>
+      <button >9</button>
+      <button >/</button>
+
+      <button >4</button>
+      <button >5</button>
+      <button >6</button>
+      <button >*</button>
+
+      <button >1</button>
+      <button >2</button>
+      <button >3</button>
+      <button >-</button>
+
+      <button >0</button>
+      <button>.</button>
+      <button>=</button>
+      <button>+</button>
+
+      <button onclick="clearDisplay()">C</button>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleScientific()">Scientifique</button>
+  <div class="sci-buttons" id="sci-buttons">
+      <button onclick="applyFunc('sin')">sin</button>
+      <button onclick="applyFunc('cos')">cos</button>
+      <button >(</button>
+      <button >)</button>
+      <button >π</button>
+    </div>
+  </div>
+ <script src="/scripts.js"></script>
+ 
+
+</body>
+
+</html>
+
+
+    
+
